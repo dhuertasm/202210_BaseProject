@@ -1,20 +1,24 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-        <th scope="col">Nombre común</th>
-          <th scope="col">Tipo</th>
-          <th scope="col">Clima</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr *ngFor="let planta of plantas; let i = index">
-        <th scope="row">{{i}}</th>
-        <td>{{planta.nombre_comun}}</td>
-        <td>{{planta.tipo}}</td>
-        <td>{{planta.clima}}</td>
+<div class="col-9 p-3" >
+  <table class="table">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+          <th scope="col">Nombre común</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Clima</th>
       </tr>
-  </tbody>
-</table>
-<p>Total plantas de interior: {{numeroPlantasInteriorExterior[0]}}</p>
-<p>Total plantas de exterior: {{numeroPlantasInteriorExterior[1]}}</p>
+    </thead>
+    <tbody>
+        <tr *ngFor="let planta of plantas; let i = index">
+          <th scope="row">{{i}}</th>
+          <td>{{planta.nombre_comun}}</td>
+          <td>{{planta.tipo}}</td>
+          <td>{{planta.clima}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col">
+  <p class="text-start lh-1">Total plantas de interior: {{numeroPlantasInteriorExterior[0]}} <br> Total Plantas de exterior: {{numeroPlantasInteriorExterior[1]}}</p>
+ <!-- <p class="text-start">Total plantas de exterior: {{numeroPlantasInteriorExterior[1]}}</p> -->
+</div>
